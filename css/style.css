@@ -1,0 +1,117 @@
+body{
+    background-color: #201C35;
+    overflow-x: hidden;
+}
+
+/* header */
+
+.colornuevo {
+    background-color: #210436;
+  }
+
+  .cabecera {
+    justify-content: flex-end;
+    background-color: transparent;
+    font-size: large;
+    color: white;
+  }
+
+  .botoncabecera {
+    border: solid white 3px;
+  }
+  
+  .he {
+    padding: 3px;
+    margin: 3px;
+  }
+  
+  .he:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .he2 {
+    border: solid white 1px;
+  }
+  
+  .bhn {
+    border: solid black 2px;
+  }
+
+.ff{
+    display: flex;
+    justify-content: center;
+}
+
+/* primer section */
+h1{
+    color: white;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    text-align: center;
+    background-color: #312B4F;
+    border: solid gray 1px;
+}
+
+.text3 {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: x-large;
+  }
+
+  .transparent {
+    background-color: transparent;
+  }
+
+  .bb{
+    border: solid 1px gray;
+  }
+
+  .bt{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .ct{
+    color: white;
+    padding: 20px;
+    text-align: center
+  }
+
+
+
+  /* footer */
+  .burich {
+    text-decoration: none;
+    background-color: rgb(25, 3, 41);
+    color: hsl(0, 1%, 71%);
+    text-align: center;
+    transition: all 0.5s;
+  }
+  
+  .burich:hover {
+    transform: scale(1.1);
+    color: white;
+  }
+  
+  footer {
+    margin-top: 20px;
+    background-color: rgb(25, 3, 41);
+    color: hsl(0, 1%, 71%);
+    text-align: center;
+  }
+  
+  .links {
+    font-size: 30px;
+    justify-content: center;
+  }
+  
+  .pp {
+    font-size: 20px;
+  }
+
+  .ppo {
+    font-size: 10px;
+  }
