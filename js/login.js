@@ -32,7 +32,7 @@ let cliente = new Cliente ({
         paymentMethod: paymentMethod
 })
 
-
+/* Agregamos datos del cliente */
 function agregarDatosCliente(){
    const datos = `            
         <div class="col-lg-3"></div>
