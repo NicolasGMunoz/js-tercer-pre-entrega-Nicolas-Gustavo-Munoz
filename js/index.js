@@ -4,19 +4,19 @@ const productos1 = [
         id: 1,
         name: "Mate Impresion 3D Harry Potter",
         price: 3200,
-        foto: "../assets/matesIndex/Mate1.png"
+        foto: "./assets/matesIndex/Mate1.png"
     },
     {
         id: 2,
         name: "Mate Impresion 3D Naruto",
         price: 2700,
-        foto: "../assets/matesIndex/Mate2.png"
+        foto: "./assets/matesIndex/Mate2.png"
     },
     {
         id: 3,
         name: "Mate Impresion 3D Snorlax",
         price: 2700,
-        foto: "../assets/matesIndex/Mate3.png"
+        foto: "./assets/matesIndex/Mate3.png"
     },
 ]
 const productos2 =[
