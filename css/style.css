@@ -80,7 +80,16 @@ h1{
     text-align: center
   }
 
+  /* login */
 
+  .fs{
+    width: 37.5rem;
+    margin-left: 3%;
+  }
+
+  .wt{
+    width: 40rem;
+  }
 
   /* footer */
   .burich {
