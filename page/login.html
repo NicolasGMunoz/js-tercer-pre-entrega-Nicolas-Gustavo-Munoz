@@ -41,13 +41,13 @@
     </header>
     
     <!-- datos del cte -->
-    <section class="container-fluid">
-        <div class="row" id="datosCliente">
+    <section class="container-fluid ">
+        <div class="row visible" id="datosCliente">
         </div>
     </section>
 
     <!-- form -->
-    <section class="containerfluid mt-5">
+    <section class="containerfluid mt-5" id="sectionForm">
         <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6 bt">
@@ -73,11 +73,26 @@
                     <option value="Tarjeta Credito / Debito">Tarjeta de Credito / Debito</option>
                 </select>
                 <div class="bt mt-3 mb-3">
-                    <button type="submit" class="btn btn-primary bt ct" id="cargarDatos">Cargar Datos</button>
+                    <button type="submit" class="btn btn-primary bt ct botonApagado" id="cargarDatos">Cargar Datos</button>
                 </div>
             </form>
         </div>
         <div class="col-lg-3"></div>
+        </div>
+    </section>
+
+    <!-- cargar nuevo form -->
+    <section class="container-fluid visible" id="cargarNuevo">
+        <div class="row" >
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 bt ">
+                <div class="card transparent mt-5" >
+                    <div class="">
+                        <a href="#" class="btn btn-primary bt" id="btnCargar">Cargar Datos Nuevos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
         </div>
     </section>
 

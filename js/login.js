@@ -1,4 +1,5 @@
 const formulario = document.getElementById("formulario")
+const cargarDatos = document.getElementById("cargarDatos")
 const nombre = document.getElementById("nombre").value
 const apellido = document.getElementById("apellido").value
 const edad = document.getElementById("edad").value
@@ -6,6 +7,11 @@ const domicilio = document.getElementById("domicilio").value
 const dni = document.getElementById("dni").value
 const paymentMethod = document.getElementById("paymentMethod").value
 const datosCliente = document.getElementById("datosCliente")
+const sectionform = document.getElementById("sectionForm")
+const controlForm = document.querySelectorAll(".form-control")
+const cargarNuevo = document.getElementById("cargarNuevo")
+const btnCargar = document.getElementById("btnCargar")
+let verdad = true;
 
 /* Creamos la clase constructora de cliente */
 class Cliente{
@@ -48,8 +54,22 @@ function agregarDatosCliente(){
         <div class="col-lg-3"></div>
         `
     document.getElementById("datosCliente").innerHTML += datos;
+    datosCliente.classList.remove('visible')
+    sectionform.classList.add('visible')
+    cargarNuevo.classList.remove('visible')
 }
 
+controlForm.forEach(input => {
+    input.addEventListener('input', () => {
+        if (controlForm[0].value && controlForm[1].value && controlForm[2].value && controlForm[3].value && controlForm[4].value){
+            cargarDatos.classList.remove("botonApagado")
+            verdad = true;
+        }else{
+            cargarDatos.classList.add("botonApagado")
+            verdad = false;
+        }
+    })
+});
 
 formulario.addEventListener('submit', (e)=> {
     e.preventDefault();
@@ -60,7 +80,17 @@ formulario.addEventListener('submit', (e)=> {
     cliente.dni = document.getElementById("dni").value
     cliente.paymentMethod = document.getElementById("paymentMethod").value
     
-    agregarDatosCliente();
-    console.log(cliente.verCliente());
+    if (verdad == true){
+        agregarDatosCliente();
+    }else{
+
+    }
+    
+    
 })
 
+btnCargar.addEventListener('click', () => {
+   setTimeout(() => {
+    location.reload()
+   }, 2000);
+})

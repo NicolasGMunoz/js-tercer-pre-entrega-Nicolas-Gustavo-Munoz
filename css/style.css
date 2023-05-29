@@ -99,6 +99,15 @@ h1{
     width: 40rem;
   }
 
+  .visible{
+    display: none;
+  }
+
+  .botonApagado{
+    display: none;
+  }
+
+
   /* footer */
   .burich {
     text-decoration: none;
