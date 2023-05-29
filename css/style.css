@@ -60,6 +60,14 @@ h1{
     font-size: x-large;
   }
 
+  .text {
+    color: white;
+    padding: 20px;
+    text-align:left;
+    font-size: x-large;
+
+  }
+
   .transparent {
     background-color: transparent;
   }

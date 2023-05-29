@@ -40,12 +40,7 @@ const productos2 =[
     },
 ]
 
-// let nombre = prompt ("Ingrese su nombre: ");
-// let apellido = prompt ("Ingrese su apellido: ");
-// let edad = Number(prompt("Ingese su edad: "));
-// let domicilio = prompt ("Ingese su domicilio: ");
-// let dni = Number(prompt ("Ingese su DNI: "));
-// let paymentMethod = prompt ("Ingese su metodo de pago: ");
+
 let productos3D = [];
 let productosRemera = [];
 let carrito = [];
@@ -68,42 +63,8 @@ function cargaDeProductos() {
     for (const producto of productos2){
         productosRemera.push(new Producto(producto.id, producto.name, producto.price, producto.foto))
         }
-    }
-
-    
-cargaDeProductos();
-
-/* Creamos la clase constructora de cliente */
-class Cliente{
-    constructor (obj){
-        this.nombre = nombre
-        this.apellido = apellido
-        this.edad = edad
-        this.domicilio = domicilio
-        this.dni = dni
-        this.paymentMethod = paymentMethod
-    }
-    verCliente = () =>{
-        return `Nombre: ${cliente.nombre} ${cliente.apellido} \nEdad: ${cliente.edad} \nDomicilio: ${cliente.domicilio} \nDNI: ${cliente.dni} \nMetodo de Pago: ${cliente.paymentMethod}`
-    }
 }
-
-/* Creamos el objeto cliente */
-// let cliente = new Cliente ({
-//         nombre: nombre,
-//         apellido: apellido,
-//         edad: edad,
-//         domicilio: domicilio,
-//         dni: dni,
-//         paymentMethod: paymentMethod
-// })
-
-// alert (`Nombre: ${cliente.nombre} ${cliente.apellido} \nEdad: ${cliente.edad} \nDomicilio: ${cliente.domicilio} \nDNI: ${cliente.dni} \nMetodo de Pago: ${cliente.paymentMethod}`);
-
-// console.log(cliente);
-
-// alert(cliente.verCliente());
-// console.log(cliente.verCliente());
+cargaDeProductos();
 
 
 /* Creamos la funcion para agregar nuestro array de prodcutos con DOM */

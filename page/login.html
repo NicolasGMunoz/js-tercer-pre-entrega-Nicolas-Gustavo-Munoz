@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-    <title>Carrito</title>
+    <title>Login</title>
 </head>
 <body>
     <header class="container-fluid colornuevo">
@@ -40,33 +40,40 @@
         </nav>
     </header>
     
+    <!-- datos del cte -->
+    <section class="container-fluid">
+        <div class="row" id="datosCliente">
+        </div>
+    </section>
+
+    <!-- form -->
     <section class="containerfluid mt-5">
         <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6 bt">
-            <form class="bb lugar">
+            <form class="bb" id="formulario">
                 <div class=" bt ct wt">
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Nombre">
+                    <input type="text" id="nombre" class="form-control" placeholder="Nombre">
                   </div>
                 <div class=" bt ct">
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Apellido">
+                    <input type="text" id="apellido" class="form-control" placeholder="Apellido">
                 </div>
                 <div class="bt ct">
-                    <input type="number" id="disabledTextInput" class="form-control" placeholder="Edad">
+                    <input type="number" id="edad" class="form-control" placeholder="Edad">
                 </div>
                 <div class="bt ct">
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Domicilio">
+                    <input type="text" id="domicilio" class="form-control" placeholder="Domicilio">
                 </div>
                 <div class="bt ct">
-                    <input type="number" id="disabledTextInput" class="form-control" placeholder="DNI">
+                    <input type="number" id="dni" class="form-control" placeholder="DNI">
                 </div>
-                <select class="form-select mt-3 fs" aria-label="Default select example">
+                <select class="form-select mt-3 fs" aria-label="size 3 " id="paymentMethod">
                     <option selected>Metodo de Pago</option>
-                    <option value="1">Efectivo / Transferencia</option>
-                    <option value="2">Tarjeta de Credito / Debito</option>
+                    <option value="Efectivo / Transferencia">Efectivo / Transferencia</option>
+                    <option value="Tarjeta Credito / Debito">Tarjeta de Credito / Debito</option>
                 </select>
                 <div class="bt mt-3 mb-3">
-                    <button type="submit" class="btn btn-primary bt ct">Cargar Datos</button>
+                    <button type="submit" class="btn btn-primary bt ct" id="cargarDatos">Cargar Datos</button>
                 </div>
             </form>
         </div>
@@ -74,8 +81,30 @@
         </div>
     </section>
 
+
+    <!-- footer -->
+    <footer class="container-fluid">
+        <div class="row">  
+            <div class="col-lg-9 container-fluid">
+                <div class="row">
+                    <h2 class="col-lg-3 mt-1">Contacto</h2>
+                    <a class="col-lg-3 col-md-4 col-sm-12 burich links" href="https://api.whatsapp.com/send/?phone=%2B543624735448&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="col-lg-3 col-md-4 col-sm-12 burich links" href="https://www.instagram.com/nimutech_geekstore/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="col-lg-3 col-md-4 col-sm-12 burich links" href="#" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="col-lg-3 col-md-12 col-sm-12 mt-1 container-fluid">
+                <div class="row">
+                    <a class="burich pp col-md-12 col-sm-12 col-lg-12" href="#">Politicas de Privacidad</a>
+                    <a class="burich ppo col-md-12 col-sm-12 col-lg-12" href="#">Developed by Nicolás Muñoz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Mi Js -->
-    <script src="../js/index.js"></script>
+    <script src="../js/login.js"></script>
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- font -->
