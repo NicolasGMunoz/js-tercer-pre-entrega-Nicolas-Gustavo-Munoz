@@ -24,19 +24,19 @@ const productos2 =[
         id: 4,
         name: "Remera Negra Itachi",
         price: 3000,
-        foto: "../assets/remerasIndex/Remera Itachi .png"
+        foto: "./assets/remerasIndex/Remera Itachi .png"
     },
     {
         id: 5,
         name: "Remera Negra Kakashi",
         price: 3500,
-        foto: "../assets/remerasIndex/Remera Kakashi.png"
+        foto: "./assets/remerasIndex/Remera Kakashi.png"
     },
     {
         id: 6,
         name: "Remera Negra Luffy",
         price: 3000,
-        foto: "../assets/remerasIndex/Remera one piece 2.png"
+        foto: "./assets/remerasIndex/Remera one piece 2.png"
     },
 ]
 
@@ -106,7 +106,6 @@ class Cliente{
 // console.log(cliente.verCliente());
 
 
-
 /* Creamos la funcion para agregar nuestro array de prodcutos con DOM */
 function agregarProductosAlHtml1(){
     productos3D.forEach((producto)=>{
@@ -144,3 +143,4 @@ function agregarProductosAlHtml2(){
     })
 }
 agregarProductosAlHtml2()
+
