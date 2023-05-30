@@ -11,6 +11,7 @@ const sectionform = document.getElementById("sectionForm")
 const controlForm = document.querySelectorAll(".form-control")
 const cargarNuevo = document.getElementById("cargarNuevo")
 const btnCargar = document.getElementById("btnCargar")
+const informando = document.getElementById("informando")
 let verdad = true;
 
 /* Creamos la clase constructora de cliente */
@@ -62,7 +63,10 @@ controlForm.forEach(input => {
         if (controlForm[0].value && controlForm[1].value && controlForm[2].value >= 18 && controlForm[3].value && controlForm[4].value.length >=7 && controlForm[4].value.length <=8 && controlForm[5].value != "Metodo de Pago"){
             cargarDatos.classList.remove("botonApagado")
             verdad = true;
+            informando.classList.add("visible")
+
         }else{
+            informando.classList.remove("visible")
             cargarDatos.classList.add("botonApagado")
             verdad = false;
         }

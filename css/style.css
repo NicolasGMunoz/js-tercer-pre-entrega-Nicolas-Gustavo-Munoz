@@ -95,6 +95,13 @@ h1{
 
   /* login */
 
+  .textoRapido{
+    color: white;
+    padding: 5px;
+    text-align:left;
+    font-size: large;
+  }
+
   .fs{
     width: 37.5rem;
     margin-left: 3%;
