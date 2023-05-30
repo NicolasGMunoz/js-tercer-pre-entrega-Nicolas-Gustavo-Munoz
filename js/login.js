@@ -61,7 +61,7 @@ function agregarDatosCliente(){
 
 controlForm.forEach(input => {
     input.addEventListener('input', () => {
-        if (controlForm[0].value && controlForm[1].value && controlForm[2].value && controlForm[3].value && controlForm[4].value){
+        if (controlForm[0].value && controlForm[1].value && controlForm[2].value >= 18 && controlForm[3].value && controlForm[4].value.length >= 8 && controlForm[5].value != "Metodo de Pago"){
             cargarDatos.classList.remove("botonApagado")
             verdad = true;
         }else{
