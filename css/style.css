@@ -64,7 +64,7 @@ h1{
     color: white;
     padding: 20px;
     text-align:left;
-    font-size: x-large;
+    font-size: large;
 
   }
 
@@ -88,6 +88,11 @@ h1{
     text-align: center
   }
 
+  .botonParaComprar{
+    display: flex;
+    justify-content: center;
+  }
+
   /* login */
 
   .fs{
@@ -107,6 +112,19 @@ h1{
     display: none;
   }
 
+/* Carrito */
+
+.carritoClas{
+  display: flex;
+  justify-content: center;
+}
+.textCarrito {
+  color: white;
+  padding: 5px;
+  text-align:left;
+  font-size: large;
+
+}
 
   /* footer */
   .burich {

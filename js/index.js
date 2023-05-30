@@ -1,30 +1,31 @@
 let productos3D = [];
 let productosRemera = [];
 let carrito = [];
-const bt1 = document.getElementById("1")
-const bt2 = document.getElementById("bt2")
-const bt3 = document.getElementById("bt3")
-const bt4 = document.getElementById("bt4")
-const bt5 = document.getElementById("bt5")
-const bt6 = document.getElementById("bt6")
+const btAddToCard = document.getElementsByClassName('btAddToCard')
+// const bt1 = document.getElementById("1")
+// const bt2 = document.getElementById("bt2")
+// const bt3 = document.getElementById("bt3")
+// const bt4 = document.getElementById("bt4")
+// const bt5 = document.getElementById("bt5")
+// const bt6 = document.getElementById("bt6")
 
 
 /*creamos los array´s de productos de la tienda*/
 const productos1 = [
     {
-        id: "1",
+        id: 1,
         name: "Mate Impresion 3D Harry Potter",
         price: 3200,
         foto: "./assets/matesIndex/Mate1.png"
     },
     {
-        id: "2",
+        id: 2,
         name: "Mate Impresion 3D Naruto",
         price: 2700,
         foto: "./assets/matesIndex/Mate2.png"
     },
     {
-        id: "3",
+        id: 3,
         name: "Mate Impresion 3D Snorlax",
         price: 2700,
         foto: "./assets/matesIndex/Mate3.png"
@@ -74,6 +75,7 @@ function cargaDeProductos() {
 cargaDeProductos();
 
 
+
 /* Creamos la funcion para agregar nuestro array de prodcutos con DOM */
 function agregarProductosAlHtml1(){
     productos3D.forEach((producto)=>{
@@ -81,10 +83,10 @@ function agregarProductosAlHtml1(){
         <div class="col-lg-4 ff">
         <div class="card transparent bb" style="width: 18rem;">
         <img src="${producto.foto}" class="card-img-top" alt="...">
-        <div class="card-body ">
+        <div class="card-body">
         <h5 class="card-title ct">${producto.name}</h5>
         <p class="card-text ct">$${producto.price}</p>
-        <a href="#" class="btn btn-primary bt ct " id="${producto.id}">Agregar al Carrito</a>
+        <div class="botonParaComprar"><button class="btn btn-primary bt ct btAddToCard" value="${producto.id}">Agregar al Carrito</button></div>
         </div>
         </div>
         </div>
@@ -103,7 +105,7 @@ function agregarProductosAlHtml2(){
         <div class="card-body">
         <h5 class="card-title ct">${producto.name}</h5>
         <p class="card-text ct">$${producto.price}</p>
-        <a href="#" class="btn btn-primary bt ct" id="bt${producto.id}">Agregar al Carrito</a>
+        <div class="botonParaComprar"><button class="btn btn-primary bt ct btAddToCard" value="${producto.id}">Agregar al Carrito</button></div>
         </div>
         </div>
         </div>
@@ -114,18 +116,33 @@ function agregarProductosAlHtml2(){
 agregarProductosAlHtml2()
 
 
-function cargaBt1(){
-    let productoBuscado = 1;
-    let prodcutoEncontrado = productos3D.find((producto)=>{
-        return producto.id == productoBuscado
-    })
-    carrito.push(prodcutoEncontrado)
-    for (const producto of carrito){
-        console.log(producto.id + " " + producto.name + " " + producto.price);
+/* funcion que recibe un value para setearlo como id y poder cargar productos al carrito */
+function cargaBt(){
+    for(const btn of btAddToCard){
+        btn.addEventListener ('click', () => {
+            if (btn.value > 0 && btn.value < 4){
+                let buscado3D = btn.value
+                let encontrado3D = productos3D.find((producto)=>{
+                    return producto.id == buscado3D
+                   
+                })
+                carrito.push(encontrado3D)
+            }else if (btn.value > 3 && btn.value < 7){
+                let buscadoRem = btn.value
+            
+                let encontradoRem = productosRemera.find((producto)=>{
+                    return producto.id == buscadoRem
+                   
+                })
+                carrito.push(encontradoRem)
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito))
+            let verCarrito = localStorage.getItem('carrito')
+            console.log(JSON.parse(verCarrito));
+        }) 
     }
 }
+cargaBt()
 
-bt1.addEventListener("click", () =>{
-    cargaBt1();
-})
 
