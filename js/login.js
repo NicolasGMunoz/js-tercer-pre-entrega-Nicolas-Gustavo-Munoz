@@ -44,7 +44,7 @@ function agregarDatosCliente(){
         <div class="col-lg-3"></div>
         <div class="col-lg-6 bt">        
         <ul class="list-group fs mt-5">
-        <li class="list-group-item transparent text">Nombre: ${cliente.nombre} ${cliente.nombre}</li>
+        <li class="list-group-item transparent text">Nombre: ${cliente.nombre} ${cliente.apellido}</li>
         <li class="list-group-item transparent text">Edad: ${cliente.edad}</li>
         <li class="list-group-item transparent text">Domicilio: ${cliente.domicilio}</li>
         <li class="list-group-item transparent text">DNI: ${cliente.dni}</li>
