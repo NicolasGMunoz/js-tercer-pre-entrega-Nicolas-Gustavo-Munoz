@@ -35,7 +35,7 @@ let cliente = new Cliente ({
         paymentMethod: paymentMethod
 })
 
-/* Agregamos datos del cliente */
+/* Agregamos datos del cliente por dom */
 function agregarDatosCliente(){
    const datos = `            
         <div class="col-lg-3"></div>
@@ -56,6 +56,7 @@ function agregarDatosCliente(){
     cargarNuevo.classList.remove('visible')
 }
 
+/* validacion de datos correctos */
 controlForm.forEach(input => {
     input.addEventListener('input', () => {
         if (controlForm[0].value && controlForm[1].value && controlForm[2].value >= 18 && controlForm[3].value && controlForm[4].value.length >=7 && controlForm[4].value.length <=8 && controlForm[5].value != "Metodo de Pago"){
@@ -68,6 +69,7 @@ controlForm.forEach(input => {
     })
 });
 
+/*cargamos los datos obtenidos del formulario al objeto cliente */
 formulario.addEventListener('submit', (e)=> {
     e.preventDefault();
     cliente.nombre = document.getElementById("nombre").value
@@ -85,7 +87,7 @@ formulario.addEventListener('submit', (e)=> {
     
     
 })
-
+/* Boton para recargar form y pagina */
 btnCargar.addEventListener('click', () => {
    setTimeout(() => {
     location.reload()

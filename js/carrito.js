@@ -1,3 +1,5 @@
+/*funcion que recibe el arrary del localstorage y setea informacion en el dom
+*/
 function pasarCarrito (){
     if(localStorage.getItem('carrito') !== null){
         let verCarrito = localStorage.getItem('carrito')
