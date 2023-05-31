@@ -1,6 +1,8 @@
 let productos3D = [];
 let productosRemera = [];
 let carrito = [];
+let max = 1000;
+let min = 0;
 const btAddToCard = document.getElementsByClassName('btAddToCard')
 
 
@@ -122,12 +124,14 @@ agregarProductosAlHtml2()
 function cargaBt(){
     for(const btn of btAddToCard){
         btn.addEventListener ('click', () => {
+            
             if (btn.value > 0 && btn.value < 4){
                 let buscado3D = btn.value
+
                 let encontrado3D = productos3D.find((producto)=>{
                     return producto.id == buscado3D
-                   
                 })
+
                 carrito.push(encontrado3D)
             }else if (btn.value > 3 && btn.value < 7){
                 let buscadoRem = btn.value

@@ -76,6 +76,11 @@ h1{
     border: solid 1px gray;
   }
 
+  .bb2{
+    border: solid 1px gray;
+    margin-left: 40%;
+  }
+
   .bt{
     display: flex;
     justify-content: center;

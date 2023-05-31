@@ -1,6 +1,10 @@
+const borrarP = document.getElementById("borrarP")
 const comprar = document.getElementById("comprar")
 const finalizarCompra = document.getElementById("finalizarCompra")
 const carritoVacio = document.getElementById("carritoVacio")
+const loginVacio = document.getElementById("loginVacio")
+const borrarC = document.getElementById("borrarC")
+
 
 /*funcion que recibe el arrary del localstorage y setea informacion en el dom
 */
@@ -55,8 +59,8 @@ function pasarCarrito (){
 
             `
             document.getElementById("carritoTotal").innerHTML += template
-
             finalizarCompra.classList.remove('visible')
+            
 
         }else{
             let verCarrito = localStorage.getItem('carrito')
@@ -93,14 +97,34 @@ function pasarCarrito (){
 
             `
             document.getElementById("carritoTotal").innerHTML += template
+            loginVacio.classList.remove('visible')
+            
         }
+        borrarP.classList.remove('visible')
         carritoVacio.classList.add('visible')
+
     }else{
 
     }
 }
 
 pasarCarrito()
+
+
+borrarC.addEventListener('click',() => {
+    Toastify({
+
+        text: "Su carrito fue eliminado",
+    
+        duration: 2000
+    
+    }).showToast();
+    localStorage. removeItem('carrito')
+    setTimeout(() => {
+        location.reload()
+       }, 2000);
+})
+
 
 comprar.addEventListener('click',() =>{
     Toastify({
