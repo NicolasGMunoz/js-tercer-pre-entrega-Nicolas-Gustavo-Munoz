@@ -125,11 +125,17 @@ h1{
   display: flex;
   justify-content: center;
 }
+
 .textCarrito {
   color: white;
   padding: 5px;
   text-align:left;
   font-size: large;
+
+}
+.textCarrito1 {
+  color: white;
+  font-size: small;
 
 }
 

@@ -2,6 +2,8 @@ let productos3D = [];
 let productosRemera = [];
 let carrito = [];
 const btAddToCard = document.getElementsByClassName('btAddToCard')
+
+
 // const bt1 = document.getElementById("1")
 // const bt2 = document.getElementById("bt2")
 // const bt3 = document.getElementById("bt3")
@@ -138,8 +140,13 @@ function cargaBt(){
             }
 
             localStorage.setItem('carrito', JSON.stringify(carrito))
-            let verCarrito = localStorage.getItem('carrito')
-            console.log(JSON.parse(verCarrito));
+            Toastify({
+
+                text: "Producto agregado correctamente",
+                
+                duration: 1000
+                
+            }).showToast();
         }) 
     }
 }

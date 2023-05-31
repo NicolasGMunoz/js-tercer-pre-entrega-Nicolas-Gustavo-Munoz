@@ -83,6 +83,15 @@ formulario.addEventListener('submit', (e)=> {
     cliente.dni = document.getElementById("dni").value
     cliente.paymentMethod = document.getElementById("paymentMethod").value
     
+    localStorage.setItem('cliente', JSON.stringify(cliente))
+    Toastify({
+
+        text: "Los datos fueron ingresado correctamente",
+    
+        duration: 1000
+    
+    }).showToast();
+
     if (verdad == true){
         agregarDatosCliente();
     }else{
